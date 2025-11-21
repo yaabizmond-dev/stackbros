@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+#menu:checked ~ ul{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 20px;
+  position: fixed;
+  top: 50px;
+  bottom: 250px;
+  left: 0;
+  right: 0;
+  background-color:#f4f1f6;
+}
+#menu:checked ~ label section div:nth-child(even){
+  display: none;
+}
+#menu:checked ~ label section div:nth-child(odd){
+  margin-block: 4px;
+}
+#menu:checked ~ label section{
+height: 35px;
+}
+#menu:checked ~ label section div:nth-child(1){ 
+  transform: rotate(45dg);
+  transition: 2s;
+ }
+#menu:checked ~ label section div:nth-child(3){
+  transform: rotate(-45deg) translate(6px,-5px);
+  background-color: rgb(244,176,244);
+  transition: 2s;
+}
+
+
+
+
